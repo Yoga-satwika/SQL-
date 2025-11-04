@@ -4,31 +4,31 @@
 
 # Main DDL Commands 
 
-  CREAT - Creates new database objects (like tables, views, or indexes). 
+   * CREAT - Creates new database objects (like tables, views, or indexes). 
 
   Example:-  
              
           CREATE TABLE Students (ID INT, Name VARCHAR(50));
 
-  ALTER - Modifies the structure of an existing table (add, delete, or change columns).
+   * ALTER - Modifies the structure of an existing table (add, delete, or change columns).
 
   Example:- 
 
           ALTER TABLE Students ADD Email VARCHAR(100);
 
-  DROP - Deletes an entire database object permanently.
+   * DROP - Deletes an entire database object permanently.
 
   Example:- 
 
            DROP TABLE Students;
 
- TRUNCATE - Deletes all records from a table but keeps the table structure.
+   * TRUNCATE - Deletes all records from a table but keeps the table structure.
 
  Example:- 
 
           TRUNCATE TABLE Students;
 
- RENAME - Changes the name of a database object.
+ * RENAME - Changes the name of a database object.
 
  Example:- 
 
@@ -176,12 +176,91 @@
         REVOKE INSERT, UPDATE
         ON Employees
         FROM user1;
+
 * Ensuring Proper Security and Access Control
 
      Revoking privileges helps maintain data security by ensuring users only have the permissions necessary for their role.
 
  <img width="395" height="328" alt="image" src="https://github.com/user-attachments/assets/a31fb5f7-8909-4659-9f6c-6620ee22cc4e" />
  <img width="475" height="355" alt="image" src="https://github.com/user-attachments/assets/407fcfd1-b0e9-4804-87ff-b6837b7bc468" />
+
+# DQL (Data Query Language):
+
+  It is mainly used to query (retrieve) data from a database.
+
+  The most important DQL command is SELECT, which helps users fetch data based on specific conditions.
+
+* SELECT (again): Retrieving data from one or more tables.
+
+   The SELECT statement is used to extract data from database tables.
+
+        SELECT column1, column2, ...
+        FROM table_name
+        WHERE condition;
+
+* Aggregating data using functions like COUNT, SUM, AVG, MIN, MAX.
+ 
+   Aggregate functions perform calculations on a set of values and return a single result.
+
+Function            -                   	Meaning                                       -                         	Example
+
+COUNT()     -                  	Counts number of rows	                     -                                SELECT COUNT(*) FROM Employees;
+
+SUM()	      -                   Adds up numeric values	                   -                                SELECT SUM(Salary) FROM Employees;
+
+AVG()       -                  	Calculates average value	                 -                                SELECT AVG(Salary) FROM Employees;
+
+MIN()       -                  	Finds smallest value	                     -                                SELECT MIN(Salary) FROM Employees;
+
+MAX()       -                  	Finds largest value	                       -                                SELECT MAX(Salary) FROM Employees;
+
+
+       SELECT COUNT(*) AS TotalEmployees,
+       AVG(Salary) AS AverageSalary,
+       MAX(Salary) AS HighestSalary
+       FROM Employees;
+
+* Grouping data with GROUP BY.
+
+   The GROUP BY clause groups rows that have the same values into summary rows — often used with aggregate functions.
+
+      SELECT Department, COUNT(*) AS TotalEmployees, AVG(Salary) AS AvgSalary
+      FROM Employees
+      GROUP BY Department;
+
+* Filtering aggregated data with HAVING.
+
+    The HAVING clause filters the groups created by GROUP BY.
+
+        SELECT Department, AVG(Salary) AS AvgSalary
+        FROM Employees
+        GROUP BY Department
+        HAVING AVG(Salary) > 50000;
+
+* Sorting results with ORDER BY.
+
+    The ORDER BY clause sorts the result set in ascending (ASC) or descending (DESC) order.
+
+        SELECT Name, Department, Salary 
+        FROM Employees
+        ORDER BY Salary DESC;
+<img width="417" height="332" alt="image" src="https://github.com/user-attachments/assets/ca7cdbb2-cbe1-47f4-a7be-acc1b948b23d" />
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+ 
 
 
 
