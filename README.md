@@ -246,6 +246,50 @@ MAX()       -                  	Finds largest value	                       -    
         ORDER BY Salary DESC;
 <img width="417" height="332" alt="image" src="https://github.com/user-attachments/assets/ca7cdbb2-cbe1-47f4-a7be-acc1b948b23d" />
 
+# TCL (Transaction Control Language):
+
+   It is used to manage transactions in a database and control the changes made by DML statements (INSERT, UPDATE , SELECT)
+
+   A transaction is a set of SQL operations that are executed as a single unit of work.
+
+# Main TCL Commands:
+
+  COMMIT           -   Saves all the changes made by the transaction permanently in the database.
+
+         INSERT INTO Employees VALUES (101, 'John', 'HR', 45000);
+         COMMIT;
+
+  ROLLBACK         -	 Undoes all the changes made in the current transaction (before COMMIT).
+
+          DELETE FROM Employees WHERE Department = 'HR';
+          ROLLBACK;
+
+  SAVEPOINT        -   Sets a point within a transaction to which you can later roll back.
+
+       BEGIN TRANSACTION;
+       INSERT INTO Employees VALUES (102, 'Mary', 'Finance', 55000);
+       SAVEPOINT sp1;
+       UPDATE Employees SET Salary = 60000 WHERE EmpID = 102;
+       ROLLBACK TO sp1;
+       COMMIT;
+
+  SET TRANSACTION  -    Defines the properties of a transaction, like read/write mode.
+
+       SET TRANSACTION READ WRITE;  or   BEGIN TRANSACTION
+
+
+  
+
+
+ 
+  
+  
+
+
+
+
+
+
 
 
 
