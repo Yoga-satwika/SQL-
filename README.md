@@ -277,6 +277,105 @@ MAX()       -                  	Finds largest value	                       -    
 
        SET TRANSACTION READ WRITE;  or   BEGIN TRANSACTION
 
+<img width="381" height="324" alt="image" src="https://github.com/user-attachments/assets/68156b4d-8d87-431b-a81b-53aa0c1fe923" />
+
+# Constraints: 
+
+  Constraints in SQL are rules applied to table columns to ensure the accuracy, validity, and integrity of data in the  
+  database.
+
+ PRIMARY KEY  -  Ensures that each row in a table is unique and that the key column cannot contain NULL values.
+                 Every table can have only one primary key.
+
+                 CREATE TABLE Students (
+                 StudentID INT PRIMARY KEY,
+                  Name VARCHAR(50),
+                  Age INT
+                  );
+
+FOREIGN KEY  -  Creates a relationship between two tables by linking a column in one table to the PRIMARY KEY of another.
+
+          CREATE TABLE Orders (
+          OrderID INT PRIMARY KEY,
+          StudentID INT,
+          FOREIGN KEY (StudentID) REFERENCES Students(StudentID)
+          );
+
+ UNIQUE -  Ensures all values in a column (or group of columns) are unique, but can have one NULL (unlike PRIMARY KEY).
+
+         CREATE TABLE Employees (
+          EmpID INT PRIMARY KEY,
+          Email VARCHAR(100) UNIQUE
+          );
+
+ CHECK  -  Specifies a condition that each row must satisfy.
+           Used to limit the range or format of values. 
+
+         CREATE TABLE Products (
+          ProductID INT PRIMARY KEY,
+          Price DECIMAL(10,2),
+          CHECK (Price > 0)
+          );
+
+NOT NULL  -  Ensures that a column cannot have NULL values (it must always contain data).
+
+          CREATE TABLE Departments (
+          DeptID INT PRIMARY KEY,
+          DeptName VARCHAR(50) NOT NULL
+          );
+          
+<img width="460" height="347" alt="image" src="https://github.com/user-attachments/assets/d23dbd24-668a-46fb-987e-22614034ce53" />
+
+# Joins:
+
+INNER JOIN  -  Combines rows from two or more tables where there is a match in both tables.
+
+       SELECT Employees.EmpName, Departments.DeptName
+       FROM Employees
+       INNER JOIN Departments
+       ON Employees.DeptID = Departments.DeptID;
+
+LEFT JOIN  - Returns all records from the left table and matching records from the right table. Non-matching right table values show as NULL.
+
+       SELECT Employees.EmpName, Departments.DeptName
+       FROM Employees
+       LEFT JOIN Departments
+       ON Employees.DeptID = Departments.DeptID;
+
+RIGHT JOIN - Returns all records from the right table and matching records from the left table.
+
+       SELECT Employees.EmpName, Departments.DeptName
+       FROM Employees
+       RIGHT JOIN Departments
+       ON Employees.DeptID = Departments.DeptID;
+
+FULL JOIN - Combines results of both LEFT and RIGHT joins. Returns all records when there is a match in either table.
+
+      SELECT Employees.EmpName, Departments.DeptName
+      FROM Employees
+      FULL OUTER JOIN Departments
+      ON Employees.DeptID = Departments.DeptID;
+
+CROSS JOIN - Produces the Cartesian product — every row from one table combined with every row from the other.
+
+      SELECT Employees.EmpName, Departments.DeptName
+      FROM Employees
+      CROSS JOIN Departments;
+
+<img width="382" height="407" alt="image" src="https://github.com/user-attachments/assets/fdb78533-d2ed-4c25-9fce-07c0faae41fb" />
+
+
+
+
+
+
+
+
+
+
+  
+
+
 
   
 
