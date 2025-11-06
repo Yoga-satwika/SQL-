@@ -489,6 +489,13 @@ They are mainly used in the WHERE, HAVING, and SELECT clauses.
 
            EXEC procedure_name;
 
+<img width="411" height="350" alt="image" src="https://github.com/user-attachments/assets/9c06b589-07eb-4a49-a7fd-180d7b35f595" />
+
+
+
+
+
+
 
 
 
