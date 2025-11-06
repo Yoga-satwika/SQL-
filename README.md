@@ -370,7 +370,7 @@ CROSS JOIN - Produces the Cartesian product — every row from one table combine
 
  * It is also used to summarize the data.
 
-# Types of SQL Aggrgation Function
+# Types of SQL Aggregation Function
 
   * SUM
   * AVERAGE
