@@ -426,7 +426,8 @@ CROSS JOIN - Produces the Cartesian product — every row from one table combine
          SELECT DeptID, SUM(Salary) FROM Employees
          GROUP BY DeptID;
    
-<img width="419" height="352" alt="image" src="https://github.com/user-attachments/assets/118f25a6-181a-423d-a691-72c359c585b3" />
+<img width="424" height="391" alt="image" src="https://github.com/user-attachments/assets/6a8fe6b9-d0fd-4945-8a26-6d99dfce2c69" />
+
 
 
 
