@@ -509,6 +509,19 @@ They are mainly used in the WHERE, HAVING, and SELECT clauses.
 
   A CTE is a temporary named result set (like a short-lived table) that makes complex queries easier to read and reuse.
 
+       WITH cte_name AS (
+       SELECT ... FROM table_name WHERE ...
+       )
+       SELECT * FROM cte_name WHERE ...;
+
+<img width="293" height="299" alt="image" src="https://github.com/user-attachments/assets/7eed99d3-22f1-4f72-a438-ec03a7453b4b" />
+
+
+
+
+
+  
+
   
 
 
