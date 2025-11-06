@@ -491,6 +491,29 @@ They are mainly used in the WHERE, HAVING, and SELECT clauses.
 
 <img width="411" height="350" alt="image" src="https://github.com/user-attachments/assets/9c06b589-07eb-4a49-a7fd-180d7b35f595" />
 
+# Subquery
+
+   A Subquery (also called a nested query or inner query) is a query inside another query.
+
+   Both Subqueries and CTEs help you write advanced queries
+
+* Subquery: Writing subqueries within SQL statements.
+
+              SELECT column_name
+              FROM table_name
+              WHERE column_name operator (SELECT column_name FROM another_table WHERE condition);
+
+<img width="428" height="288" alt="image" src="https://github.com/user-attachments/assets/ccd16176-bcfa-417e-bd18-9012654a3dd2" />
+
+# CTE (Common Table Expression)
+
+  A CTE is a temporary named result set (like a short-lived table) that makes complex queries easier to read and reuse.
+
+  
+
+
+
+
 
 
 
