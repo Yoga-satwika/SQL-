@@ -516,7 +516,24 @@ They are mainly used in the WHERE, HAVING, and SELECT clauses.
 
 <img width="293" height="299" alt="image" src="https://github.com/user-attachments/assets/7eed99d3-22f1-4f72-a438-ec03a7453b4b" />
 
+# Views: 
 
+  A View is a virtual table that is based on the result of a SQL query.
+
+  It is used to display data in one or more tables
+
+* CREATE VIEW: Creating views for simplified querying. 
+
+   It is used to Simplify complex queries and  Improve data security 
+
+         CREATE VIEW view_name AS
+         SELECT column1, column2, ...
+         FROM table_name
+         WHERE condition;
+
+ * DROP VIEW: To delete (remove) a view from the database: 
+
+           DROP VIEW view_name;
 
 
 
