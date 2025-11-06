@@ -364,7 +364,75 @@ CROSS JOIN - Produces the Cartesian product — every row from one table combine
 
 <img width="382" height="407" alt="image" src="https://github.com/user-attachments/assets/fdb78533-d2ed-4c25-9fce-07c0faae41fb" />
 
+# SQL Aggregation Function:
 
+ It is used to perform calculations on multiple rows of a single column of a table. It returns single value.
+
+ * It is also used to summarize the data.
+
+# Types of SQL Aggrgation Function
+
+  * SUM
+  * AVERAGE
+  * MAXIMUM
+  * MINIMUM
+  * COUNT
+
+* SUM :- It is used to calculate the sum of all calculated columns. And it works on numeric fields only.
+                        (or)
+         To Calculate the sum of total numeric value.
+
+          select sum(salary) from employees;
+  
+* AVERAGE :- To Calculate the Average value in numeric column.
+
+         select Avg(salary) from employees;
+
+* MAXIMUM :- To find the highest value in the selected column.
+
+          select Max(salary) from employees;
+
+* MINIMUM :- To find the smallest value in the selected coumn.
+
+          select Min(salary) from employees;
+
+# SQL Clauses
+
+   A clause in SQL is a part of a query that performs a specific task 
+
+   They help you control how data is retrieved or displayed from a database.
+
+ * WHERE Clause
+ * HAVING Clause
+ * ORDER BY Clause
+ * GROUP BY Clause
+
+* WHERE Clause :- Filters rows before grouping or aggregation.
+
+       select * from employees where score > 1000
+
+* HAVING Clause :- Groups rows with the same values in specified columns.
+
+        SELECT DeptID, SUM(Salary) FROM Employees
+        GROUP BY DeptID
+        HAVING SUM(Salary) > 100000;
+
+* ORDER BY :- Sorts results in ascending or descending order.
+
+         SELECT * FROM Employees ORDER BY Salary DESC;
+
+* GROUP BY :- Groups rows with the same values in specified columns.
+
+         SELECT DeptID, SUM(Salary) FROM Employees
+         GROUP BY DeptID;
+   
+<img width="419" height="352" alt="image" src="https://github.com/user-attachments/assets/118f25a6-181a-423d-a691-72c359c585b3" />
+
+
+
+
+
+  
 
 
 
