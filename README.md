@@ -428,6 +428,81 @@ CROSS JOIN - Produces the Cartesian product — every row from one table combine
    
 <img width="424" height="391" alt="image" src="https://github.com/user-attachments/assets/6a8fe6b9-d0fd-4945-8a26-6d99dfce2c69" />
 
+# SQL Operator: 
+
+  In SQL, operators are special symbols or keywords used to perform operations on data — such as comparing values, doing math, or checking conditions in queries.
+
+They are mainly used in the WHERE, HAVING, and SELECT clauses.
+
+# Types of SQL Operators
+
+* Arithmatic operators :- Used for mathematical calculations.
+
+                 + , - , * , / , %
+
+* Comparison Operators :- It Compare two values (used in WHERE).
+
+                = , != , > , < , >= , <=
+
+* Logical Operators :- Compare multiple conditions.
+
+               AND , OR , NOT
+
+* Range Operator :-	Checks whether a value lies between two values.
+
+  	           	BETWEEN ... AND
+* Set Operator :-	Checks if a value exists within a set of values.
+
+                IN , NOT IN
+ * Pattern Matching Operator :-	Used for partial text search.
+
+                 LIKE , NOT LIKE
+ * Null Operator :-	Checks for NULL (missing) values.
+ 
+               IS NULL , IS NOT NULL
+
+ # Procedures
+
+   A Stored Procedure is a predefined block of SQL statements saved in the database.
+
+* CREATE PROCEDURE:-  Used to create a new stored procedure.
+
+          CREATE PROCEDURE procedure_name
+          AS
+          BEGIN
+          -- SQL statements
+          END;
+
+* ALTER PROCEDURE:- Used to modify or update an existing stored procedure.
+
+          ALTER PROCEDURE procedure_name
+          AS
+          BEGIN
+          -- Updated SQL statements
+          END;
+
+* DROP PROCEDURE:- Used to delete an existing stored procedure.
+
+           DROP PROCEDURE procedure_name;
+
+* EXECUTE:- Used to run or execute a stored procedure.
+
+           EXEC procedure_name;
+
+
+
+
+
+          
+
+
+
+
+
+
+           
+
+   
 
 
 
