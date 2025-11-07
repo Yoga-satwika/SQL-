@@ -526,14 +526,19 @@ They are mainly used in the WHERE, HAVING, and SELECT clauses.
 
    It is used to Simplify complex queries and  Improve data security 
 
-         CREATE VIEW view_name AS
-         SELECT column1, column2, ...
-         FROM table_name
-         WHERE condition;
+         create view view_name AS
+         select column1, column2, ...
+         from table_name
+         where condition;
 
- * DROP VIEW: To delete (remove) a view from the database: 
+<img width="452" height="304" alt="image" src="https://github.com/user-attachments/assets/ab7e3541-4949-4aca-a26e-42d9fc4bd83b" />
+
+ * DROP VIEW: To delete (remove) a view from the database:
+
+    
 
            DROP VIEW view_name;
+
 
 
 
