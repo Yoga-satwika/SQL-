@@ -545,6 +545,25 @@ They are mainly used in the WHERE, HAVING, and SELECT clauses.
       function_name (column)
       over (partition by column order by column)
 
+* RANK() - Assigns a rank to each row within a partition, skipping ranks for ties.
+* DENSE_RANK() - similar to RANK(), but no gaps after ties.
+* ROW_NUMBER() - Gives a unique sequence number to each row — even if values tie.
+* NTILE(n) - Divides rows into n equal groups
+* LAG() - Shows the previous row’s value — helps calculate differences.
+* LEAD() - Shows the next row’s value — opposite of LAG.
+* CUME_DIST() - Calculates the cumulative distribution (relative rank) within a partition.
+                Value ranges between >0 and 1.
+* PERCENT_RANK() - Gives a percentile rank of each row.
+
+<img width="551" height="323" alt="image" src="https://github.com/user-attachments/assets/27748a4f-e64e-4652-af1b-f88ce0a0633b" />
+
+  
+
+
+
+
+
+
 
 
 
