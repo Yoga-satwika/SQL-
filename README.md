@@ -451,6 +451,7 @@ They are mainly used in the WHERE, HAVING, and SELECT clauses.
 * Range Operator :-	Checks whether a value lies between two values.
 
   	           	BETWEEN ... AND
+  
 * Set Operator :-	Checks if a value exists within a set of values.
 
                 IN , NOT IN
@@ -535,9 +536,25 @@ They are mainly used in the WHERE, HAVING, and SELECT clauses.
 
  * DROP VIEW: To delete (remove) a view from the database:
 
-    
-
            DROP VIEW view_name;
+
+# Windows Function
+
+   Window functions perform calculations across a set of table rows that are related to the current row.
+
+      function_name (column)
+      over (partition by column order by column)
+
+
+
+
+      
+
+   
+
+
+   
+   
 
 
 
